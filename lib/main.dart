@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:muslim_supplications/modules/layout/layout_view.dart';
 
 void main() {

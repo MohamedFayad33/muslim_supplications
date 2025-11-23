@@ -1,55 +1,37 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:muslim_supplications/core/utils/size_config.dart';
 
-// import 'font_manager.dart';
+TextStyle getTextStyle() {
+  return GoogleFonts.amiri();
+}
 
-// TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) {
-//   return TextStyle(
-//       fontSize: fontSize,
-//       fontFamily: FontConstants.fontFamily,
-//       color: color,
-//       fontWeight: fontWeight);
-// }
+abstract class StylesManager {
+  TextStyle pageTitle(BuildContext context) {
+    return GoogleFonts.amiri(
+      fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 22),
+      fontWeight: FontWeight.w700,
+    );
+  }
 
-// // regular style
+  TextStyle sectionHeader(BuildContext context) {
+    return GoogleFonts.amiri(
+      fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 18),
+      fontWeight: FontWeight.w600,
+    );
+  }
 
-// TextStyle getLightStyle(
-//     {double fontSize = FontSize.s12, required Color color}) {
-//   return _getTextStyle(fontSize, FontWeightManager.light, color);
-// }
+  TextStyle zikerText(BuildContext context) {
+    return GoogleFonts.amiri(
+      fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 24),
+      fontWeight: FontWeight.bold,
+    );
+  }
 
-// // regular style
-
-// TextStyle getRegularStyle(
-//     {double fontSize = FontSize.s12, required Color color}) {
-//   return _getTextStyle(fontSize, FontWeightManager.regular, color);
-// }
-
-// // medium style
-
-// TextStyle getMediumStyle(
-//     {double fontSize = FontSize.s12, required Color color}) {
-//   return _getTextStyle(fontSize, FontWeightManager.medium, color);
-// }
-
-// // bold style
-
-// TextStyle getBoldStyle({double fontSize = FontSize.s12, required Color color}) {
-//   return _getTextStyle(fontSize, FontWeightManager.bold, color);
-// }
-
-// // semibold style
-
-// TextStyle getSemiBoldStyle(
-//     {double fontSize = FontSize.s12, required Color color}) {
-//   return _getTextStyle(fontSize, FontWeightManager.semiBold, color );
-// }
-
-// TextStyle getTextWithLine() {
-//   return TextStyle(
-//     color: ColorManager.primary,
-//     fontSize: 12,
-//     fontWeight: FontWeight.w400,
-//     decoration: TextDecoration.lineThrough,
-//     decorationColor: ColorManager.primary,
-//   );
-// }
+  TextStyle counterNum(BuildContext context) {
+    return GoogleFonts.amiri(
+      fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 48),
+      fontWeight: FontWeight.bold,
+    );
+  }
+}

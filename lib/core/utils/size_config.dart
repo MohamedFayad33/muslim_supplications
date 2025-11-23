@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 const double kDesignWidth = 375.0;
 
 class SizeConfig {
-  double getScaleFactor(BuildContext context) {
+  static double getScaleFactor(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
 
     if (width < 600) {
@@ -15,7 +15,7 @@ class SizeConfig {
     }
   }
 
-  double getResponsiveFontSize(
+  static double getResponsiveFontSize(
     BuildContext context, {
     required double fontSize,
   }) {

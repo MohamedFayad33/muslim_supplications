@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
 abstract class ColorManager {
-  static Color primary = const Color(0xFF004182);
+  static Color primary = const Color(0xFFfdfbe7);
+  static Color secondary = const Color(0xFF5d4037);
+  static Color font = const Color(0xFF3E2723);
+  static Color distinction = const Color(0xFFa1887f);
+  static Color verseSelected = const Color(0xFFefebe9);
+  static Color background = const Color(0xFFf6ebd8);
+  static Color remembrancecard = const Color(0xFFf6ebd8);
+  static Color secondaryFont = const Color(0xFF3e2723);
 }
