@@ -9,4 +9,11 @@ abstract class ColorManager {
   static Color background = const Color(0xFFf6ebd8);
   static Color remembrancecard = const Color(0xFFf6ebd8);
   static Color secondaryFont = const Color(0xFF3e2723);
+  static Color backGround1 = const Color(0xfffaf9f6);
+  static Color primary1 = const Color(0xff4e6c50);
+  static Color accent1 = const Color(0xffd4af37);
+  static Color card1 = const Color(0xffffffff);
+  static Color text1 = const Color(0xff393e46);
+  static Color secText = const Color(0xffaaabbb);
+  static Color inactive1 = const Color(0xffe8e8e8);
 }
