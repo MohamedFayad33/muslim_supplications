@@ -1,4 +1,9 @@
-abstract class ImageAssets {}
+abstract class ImageAssets {
+  static const String shape1 = 'assets/icons/Shape-04.png';
+  static const String shape2 = 'assets/icons/Shape-07.png';
+  static const String shape3 = 'assets/icons/vecteezy_gold.png';
+  static const String shape4 = 'assets/icons/vecteezy_gold1.png';
+}
 
 abstract class SvgAssets {
   static const String alarm = 'assets/icons/alarm.svg';

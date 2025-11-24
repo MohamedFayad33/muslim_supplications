@@ -6,12 +6,13 @@ import 'package:muslim_supplications/core/utils/size_config.dart';
 abstract class ThemeApp {
   static ThemeData theme(BuildContext context) {
     return ThemeData(
+      scaffoldBackgroundColor: ColorManager.scaffolgd,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: ColorManager.background,
+        backgroundColor: ColorManager.cards,
 
-        selectedItemColor: ColorManager.activeIcon,
+        selectedItemColor: ColorManager.activeAicon,
 
-        unselectedItemColor: ColorManager.activeIcon,
+        unselectedItemColor: ColorManager.inactiveIcon,
 
         selectedLabelStyle: StylesManager.sectionHeader(context).copyWith(
           fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 14),
@@ -22,12 +23,12 @@ abstract class ThemeApp {
         ),
 
         selectedIconTheme: IconThemeData(
-          color: ColorManager.activeIcon,
+          color: ColorManager.activeAicon,
           size: 28,
         ),
 
         unselectedIconTheme: IconThemeData(
-          color: ColorManager.activeIcon,
+          color: ColorManager.inactiveIcon,
           size: 24,
         ),
       ),

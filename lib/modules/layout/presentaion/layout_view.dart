@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home_view.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/home_view.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/note_view.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/reminder_view.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/tasbih_view.dart';
