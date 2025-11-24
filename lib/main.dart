@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:muslim_supplications/modules/layout/layout_view.dart';
+import 'package:muslim_supplications/core/theme/theme_app.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/layout_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: LayoutView());
+    return MaterialApp(theme: ThemeApp.theme(context), home: LayoutView());
   }
 }

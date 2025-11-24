@@ -16,4 +16,5 @@ abstract class ColorManager {
   static Color text1 = const Color(0xff393e46);
   static Color secText = const Color(0xffaaabbb);
   static Color inactive1 = const Color(0xffe8e8e8);
+  static Color activeIcon = const Color(0xff8e6c26);
 }

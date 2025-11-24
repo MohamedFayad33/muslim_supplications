@@ -7,28 +7,28 @@ TextStyle getTextStyle() {
 }
 
 abstract class StylesManager {
-  TextStyle pageTitle(BuildContext context) {
+  static TextStyle pageTitle(BuildContext context) {
     return GoogleFonts.amiri(
       fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 22),
       fontWeight: FontWeight.w700,
     );
   }
 
-  TextStyle sectionHeader(BuildContext context) {
+  static TextStyle sectionHeader(BuildContext context) {
     return GoogleFonts.amiri(
       fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w600,
     );
   }
 
-  TextStyle zikerText(BuildContext context) {
+  static TextStyle zikerText(BuildContext context) {
     return GoogleFonts.amiri(
       fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.bold,
     );
   }
 
-  TextStyle counterNum(BuildContext context) {
+  static TextStyle counterNum(BuildContext context) {
     return GoogleFonts.amiri(
       fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 48),
       fontWeight: FontWeight.bold,
