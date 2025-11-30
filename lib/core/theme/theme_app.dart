@@ -32,6 +32,8 @@ abstract class ThemeApp {
           size: 24,
         ),
       ),
+
+      iconTheme: IconThemeData(color: ColorManager.activeAicon),
     );
   }
 }

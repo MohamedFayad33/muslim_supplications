@@ -13,12 +13,12 @@ class LayoutView extends StatefulWidget {
 }
 
 class _LayoutViewState extends State<LayoutView> {
-  int index = 0;
+  int index = 3;
   List<Widget> pages = const [
-    HomeView(),
-    TasbihView(),
-    ReminderView(),
     NoteView(),
+    ReminderView(),
+    TasbihView(),
+    HomeView(),
   ];
   @override
   Widget build(BuildContext context) {
