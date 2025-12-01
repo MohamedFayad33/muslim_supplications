@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/assets_manager.dart';
 import 'package:muslim_supplications/core/resources/color_manager.dart';
 import 'package:muslim_supplications/core/resources/styles_manager.dart';
+import 'package:muslim_supplications/core/resources/values_manager.dart';
 
 class AzkarCard extends StatelessWidget {
   const AzkarCard({super.key, required this.title, this.icon, this.color});
@@ -43,7 +44,14 @@ class AzkarCard extends StatelessWidget {
               ],
             ),
             icon != null ? Icon(icon, size: 60) : const SizedBox(),
-            Text(title, style: StylesManager.zikerText(context)),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+              child: Text(
+                title,
+                style: StylesManager.zikerText(context),
+                textAlign: TextAlign.center,
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
