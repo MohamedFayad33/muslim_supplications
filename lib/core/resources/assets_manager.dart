@@ -3,6 +3,8 @@ abstract class ImageAssets {
   static const String shape2 = 'assets/icons/Shape-07.png';
   static const String shape3 = 'assets/icons/vecteezy_gold.png';
   static const String shape4 = 'assets/icons/vecteezy_gold1.png';
+  static const String islamiShape1 = 'assets/images/422111918_11768774.png';
+  static const String islamiBackground = 'assets/images/11.png';
 }
 
 abstract class SvgAssets {
@@ -17,6 +19,8 @@ abstract class SvgAssets {
   static const String rosary = 'assets/icons/rosary.svg';
   static const String sebha = 'assets/icons/sebha.svg';
   static const String time = 'assets/icons/time.svg';
+  static const String islamiBackGround =
+      'assets/images/13312252_v708-aum-15-b-diwali.svg';
 }
 
 abstract class IconsAssets {}

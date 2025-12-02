@@ -52,6 +52,7 @@ class AzkarCard extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -63,7 +64,6 @@ class AzkarCard extends StatelessWidget {
                     color: ColorManager.primary,
                   ),
                 ),
-
                 RotatedBox(
                   quarterTurns: 3,
                   child: Image.asset(
