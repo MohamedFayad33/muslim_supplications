@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/values_manager.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/appbar_details_view.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/azkar_card.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/body_details_view.dart';
 
 class DetailsView extends StatelessWidget {
   const DetailsView({super.key});
@@ -18,19 +18,11 @@ class DetailsView extends StatelessWidget {
         child: Column(
           children: [
             AppbarDetailsView(),
-            Container(height: 700, child: AzkarCard(title: 'title')),
+            SizedBox(height: 30),
+            BodyDetailsView(),
           ],
         ),
       ),
     );
-  }
-}
-
-class BodyDetailsView extends StatelessWidget {
-  const BodyDetailsView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(child: AzkarCard(title: 'title'));
   }
 }

@@ -20,6 +20,7 @@ class AzkarCard extends StatelessWidget {
         color: ColorManager.cards,
         child: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -43,6 +44,7 @@ class AzkarCard extends StatelessWidget {
                 ),
               ],
             ),
+            Spacer(),
             icon != null ? Icon(icon, size: 60) : const SizedBox(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
