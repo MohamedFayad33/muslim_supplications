@@ -17,6 +17,8 @@ class AppPadding {
   static const double p20 = 20.0;
   static const double p24 = 24.0;
   static const double p28 = 28.0;
+  static const double pTopView = 60.0;
+
   static const double p100 = 100.0;
   static const double screensP = 20;
   static const double gridSpacing = 16.0;
