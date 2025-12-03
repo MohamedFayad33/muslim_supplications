@@ -25,4 +25,8 @@ abstract class SvgAssets {
 
 abstract class IconsAssets {}
 
-class JsonAssets {}
+class JsonAssets {
+  static const String azkarMassa = 'assets/data/azkar_massa.json';
+  static const String azkarSabah = 'assets/data/azkar_sabah.json';
+  static const String postPrayer = 'assets/data/PostPrayer_azkar.json';
+}

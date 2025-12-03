@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/constants_manager.dart';
 import 'package:muslim_supplications/modules/layout/data/models/azkar_card_model.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/details_view.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/azkar_card.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/details_view.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_card.dart';
 
 class Azkar extends StatelessWidget {
   const Azkar({super.key});

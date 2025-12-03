@@ -12,6 +12,16 @@ abstract class ColorManager {
   static Color activeAicon = const Color(0xFF6a4c93);
   static Color backgroundBar = const Color(0xFF6a4c93);
   static Color inactiveIcon = const Color(0xFFa098ae);
+  static Color buttonActive = const Color(0xff794a81);
+  static Color m1 = const Color(0xFFFFD166);
+  static Color m2 = const Color(0xFFF72585);
+  static Color m3 = const Color(0xFF4895EF);
+  static Color m4 = const Color(0xFFF8F9FA);
+  static Color m5 = const Color(0xFFC77DFF);
+  static Color m6 = const Color(0xFF1982C4);
+  static Color m7 = const Color(0xFFE0AAFF);
+  static Color m8 = const Color(0xFFF8F9FA);
+  static Color m9 = const Color(0xFF80FFDB);
 }
 
 // static Color primary = const Color(0xFFfdfbe7);

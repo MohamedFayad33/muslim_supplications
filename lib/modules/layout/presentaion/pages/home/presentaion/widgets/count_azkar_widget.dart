@@ -36,7 +36,7 @@ class _CountAzkarWidgetState extends State<CountAzkarWidget> {
             alignment: Alignment.center,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: ColorManager.backgroundBar,
+              color: ColorManager.buttonActive,
             ),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -44,7 +44,7 @@ class _CountAzkarWidgetState extends State<CountAzkarWidget> {
                 '$start/${widget.countNum}',
                 style: StylesManager.counterNum(
                   context,
-                ).copyWith(color: ColorManager.secText),
+                ).copyWith(color: ColorManager.pattern),
               ),
             ),
           ),

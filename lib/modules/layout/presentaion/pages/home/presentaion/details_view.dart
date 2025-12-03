@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/values_manager.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/appbar_details_view.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/body_details_view.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/appbar_details_view.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/body_details_view.dart';
 
 class DetailsView extends StatelessWidget {
   const DetailsView({super.key});
