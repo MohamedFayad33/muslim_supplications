@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/constants_manager.dart';
+import 'package:muslim_supplications/core/routes_manger/routes.dart';
 import 'package:muslim_supplications/modules/layout/data/models/azkar_card_model.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/details_view.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_card.dart';
 
 class Azkar extends StatelessWidget {
@@ -21,9 +21,7 @@ class Azkar extends StatelessWidget {
       children: azkar.map((azkar) {
         return InkWell(
           onTap: () {
-            Navigator.of(
-              context,
-            ).push(MaterialPageRoute(builder: (context) => DetailsView()));
+            Navigator.of(context).pushNamed(Routes.detailsView);
           },
           child: AzkarCard(icon: azkar.icon, title: azkar.title),
         );
