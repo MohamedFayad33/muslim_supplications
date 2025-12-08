@@ -11,6 +11,13 @@ class AzkarModel extends Equatable {
     required this.bless,
   });
 
+  factory AzkarModel.fromJson(Map<String, dynamic> json) {
+    return AzkarModel(
+      zekr: json['zekr'] as String,
+      repeat: json['repeat'] as int,
+      bless: json['bless'] as String,
+    );
+  }
   @override
   List<Object?> get props => [zekr, repeat, bless];
 }

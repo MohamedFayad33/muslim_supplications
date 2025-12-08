@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/widgets/home_view_body.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
