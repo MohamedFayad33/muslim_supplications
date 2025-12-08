@@ -16,7 +16,11 @@ class HomeLocalDataSouressImp implements HomeLocalDataSouress {
   ) async {
     List<AzkarModel> azkarMassa = [];
     String myJson = await DefaultAssetBundle.of(context).loadString(path);
-    List data = jsonDecode(myJson);
+    Map data = jsonDecode(myJson);
+    List contant = data['content'];
+    for (var zeker in contant) {
+      azkarMassa.add(AzkarModel.fromJson(zeker));
+    }
     return azkarMassa;
   }
 
