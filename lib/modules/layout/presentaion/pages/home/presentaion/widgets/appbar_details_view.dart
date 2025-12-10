@@ -3,8 +3,8 @@ import 'package:muslim_supplications/core/resources/color_manager.dart';
 import 'package:muslim_supplications/core/resources/styles_manager.dart';
 
 class AppbarDetailsView extends StatelessWidget {
-  const AppbarDetailsView({super.key});
-
+  const AppbarDetailsView({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -17,7 +17,7 @@ class AppbarDetailsView extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios, size: 34),
         ),
         Text(
-          'اذكار الصباح',
+          title,
           style: StylesManager.pageTitle(
             context,
           ).copyWith(color: ColorManager.primary, fontWeight: FontWeight.w700),

@@ -4,7 +4,7 @@ import 'package:muslim_supplications/core/resources/constants_manager.dart';
 import 'package:muslim_supplications/core/routes_manger/routes.dart';
 import 'package:muslim_supplications/modules/layout/data/models/azkar_card_model.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/manager/messa_azkar_bloc.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_card.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/custom_zakr_widget.dart';
 
 class Azkar extends StatelessWidget {
   const Azkar({super.key});
@@ -20,17 +20,24 @@ class Azkar extends StatelessWidget {
         childAspectRatio: 2 / 2,
       ),
 
-      children: azkar.map((azkar) {
+      children: azkar.map((item) {
         return InkWell(
-          onTap: () {
-            BlocProvider.of<AzkarBloc>(
-              context,
-            ).add(GetAzkarEvent(path: azkar.path, context: context));
-            Navigator.of(context).pushNamed(Routes.detailsView);
+          onTap: () async {
+            await onTop(context, item);
           },
-          child: AzkarCard(icon: azkar.icon, title: azkar.title),
+          child: CustomZakrWidget(icon: item.icon, title: item.title),
         );
       }).toList(),
     );
+  }
+
+  Future<void> onTop(BuildContext context, AzkarCardModel item) async {
+    BlocProvider.of<AzkarBloc>(
+      context,
+    ).add(GetAzkarEvent(path: item.path, context: context));
+
+    await Navigator.of(
+      context,
+    ).pushNamed(Routes.detailsView, arguments: item.title);
   }
 }

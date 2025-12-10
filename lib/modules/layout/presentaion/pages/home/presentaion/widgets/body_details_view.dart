@@ -21,29 +21,26 @@ class _BodyDetailsViewState extends State<BodyDetailsView> {
 
     return SizedBox(
       height: height * 0.75,
-      child: Stack(
-        clipBehavior: Clip.none,
-        alignment: AlignmentDirectional.bottomCenter,
-        children: [
-          AzkarCard(title: widget.azkar[index].zekr),
 
-          Positioned(
-            bottom: -45,
-            child: CountAzkarWidget(
-              counter: counter,
-              previous: () {
-                setState(() {
-                  index == 0 ? null : index--;
-                });
-              },
-              next: () {
-                setState(() {
-                  widget.azkar.length - 1 <= index ? null : index++;
-                });
-              },
-              countNum: widget.azkar[index].repeat,
-              num: num,
-            ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(child: AzkarCard(title: widget.azkar[index].zekr)),
+          CountAzkarWidget(
+            counter: counter,
+            previous: () {
+              setState(() {
+                index == 0 ? null : index--;
+              });
+            },
+            next: () {
+              setState(() {
+                widget.azkar.length - 1 <= index ? null : index++;
+              });
+            },
+            countNum: widget.azkar[index].repeat,
+            num: num,
           ),
         ],
       ),

@@ -9,7 +9,7 @@ abstract class AppConstants {
     AzkarCardModel(
       title: 'اذكار الصباح',
       icon: MyFlutterIcon.sunInv,
-      path: JsonAssets.azkarMassa,
+      path: JsonAssets.azkarSabah,
     ),
     AzkarCardModel(
       title: 'اذكار المساء ',

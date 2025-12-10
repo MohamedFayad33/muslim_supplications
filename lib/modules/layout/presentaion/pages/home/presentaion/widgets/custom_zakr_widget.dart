@@ -4,10 +4,17 @@ import 'package:muslim_supplications/core/resources/styles_manager.dart';
 import 'package:muslim_supplications/core/resources/values_manager.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/shape4_widget.dart';
 
-class AzkarCard extends StatelessWidget {
-  const AzkarCard({super.key, required this.title});
+class CustomZakrWidget extends StatelessWidget {
+  const CustomZakrWidget({
+    super.key,
+    required this.title,
+    this.icon,
+    this.color,
+  });
 
   final String title;
+  final IconData? icon;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +28,19 @@ class AzkarCard extends StatelessWidget {
           children: [
             Shape4Widget(rotateLeft: 1, rotateRight: 2),
 
+            icon != null ? Icon(icon, size: 60) : const SizedBox(),
+
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: Center(
-                  child: SingleChildScrollView(
-                    child: Text(
-                      title,
-                      style: StylesManager.zikerText(context),
-                      textAlign: TextAlign.center,
-                      textDirection: TextDirection.rtl,
-                      softWrap: true,
-                    ),
+                  child: Text(
+                    title,
+                    style: StylesManager.zikerText(context),
+                    textAlign: TextAlign.center,
+                    textDirection: TextDirection.rtl,
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
                   ),
                 ),
               ),

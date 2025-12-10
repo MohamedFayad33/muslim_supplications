@@ -9,7 +9,10 @@ class RouteGenerator {
       case Routes.initial:
         return MaterialPageRoute(builder: (_) => const LayoutView());
       case Routes.detailsView:
-        return MaterialPageRoute(builder: (_) => const DetailsView());
+        return MaterialPageRoute(
+          builder: (_) => const DetailsView(),
+          settings: settings,
+        );
 
       default:
         return unDefinedRoute();

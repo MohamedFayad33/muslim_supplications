@@ -10,6 +10,8 @@ class DetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String title = ModalRoute.of(context)?.settings.arguments as String? ?? 'n';
+
     return BlocBuilder<AzkarBloc, AzkarState>(
       builder: (context, state) => Scaffold(
         body: Padding(
@@ -20,7 +22,7 @@ class DetailsView extends StatelessWidget {
           ),
           child: Column(
             children: [
-              AppbarDetailsView(),
+              AppbarDetailsView(title: title),
               SizedBox(height: 30),
               state is AzkarSuccess
                   ? BodyDetailsView(azkar: state.myAzkar)
