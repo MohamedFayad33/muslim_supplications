@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:muslim_supplications/core/di/app_di.dart';
 import 'package:muslim_supplications/core/routes_manger/route_generator.dart';
 import 'package:muslim_supplications/core/routes_manger/routes.dart';
 import 'package:muslim_supplications/core/theme/theme_app.dart';
 
 void main() {
   runApp(const MyApp());
+  AppDi.init();
 }
 
 class MyApp extends StatelessWidget {

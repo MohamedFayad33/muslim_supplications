@@ -2,16 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/color_manager.dart';
 import 'package:muslim_supplications/core/resources/styles_manager.dart';
 
-class CountAzkarWidget extends StatefulWidget {
-  const CountAzkarWidget({super.key, required this.countNum});
+class CountAzkarWidget extends StatelessWidget {
+  const CountAzkarWidget({
+    super.key,
+    required this.countNum,
+    required this.previous,
+    required this.next,
+    required this.counter,
+    required this.num,
+  });
   final int countNum;
+  final int num;
+  final void Function() previous;
+  final void Function() next;
+  final void Function() counter;
 
-  @override
-  State<CountAzkarWidget> createState() => _CountAzkarWidgetState();
-}
-
-class _CountAzkarWidgetState extends State<CountAzkarWidget> {
-  int start = 1;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -22,26 +27,27 @@ class _CountAzkarWidgetState extends State<CountAzkarWidget> {
             color: ColorManager.inactive,
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: previous,
             icon: Icon(Icons.arrow_back_ios_new_rounded),
           ),
         ),
         const SizedBox(width: 30),
         GestureDetector(
-          onTap: () {
-            widget.countNum > start ? start++ : null;
-            setState(() {});
-          },
+          onTap: counter,
           child: Container(
+            constraints: BoxConstraints(maxHeight: 100, maxWidth: 100),
+            padding: const EdgeInsets.all(12),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(200),
               color: ColorManager.buttonActive,
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
               child: Text(
-                '$start/${widget.countNum}',
+                '$num/$countNum',
+                softWrap: true,
+                textAlign: TextAlign.center,
                 style: StylesManager.counterNum(
                   context,
                 ).copyWith(color: ColorManager.pattern),
@@ -56,7 +62,7 @@ class _CountAzkarWidgetState extends State<CountAzkarWidget> {
             color: ColorManager.inactive,
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: next,
             icon: Icon(Icons.arrow_forward_ios_rounded),
           ),
         ),

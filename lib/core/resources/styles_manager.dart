@@ -25,6 +25,8 @@ abstract class StylesManager {
     return GoogleFonts.amiri(
       fontSize: SizeConfig.getResponsiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.bold,
+      wordSpacing: 2,
+      height: 2,
     );
   }
 

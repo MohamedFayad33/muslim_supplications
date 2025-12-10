@@ -6,6 +6,7 @@ import 'package:muslim_supplications/core/resources/values_manager.dart';
 
 class AzkarCard extends StatelessWidget {
   const AzkarCard({super.key, required this.title, this.icon, this.color});
+
   final String title;
   final IconData? icon;
   final Color? color;
@@ -44,17 +45,25 @@ class AzkarCard extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
+
             icon != null ? Icon(icon, size: 60) : const SizedBox(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
-              child: Text(
-                title,
-                style: StylesManager.zikerText(context),
-                textAlign: TextAlign.center,
+
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppPadding.p16,
+                  ),
+                  child: Text(
+                    title,
+                    style: StylesManager.zikerText(context),
+                    textAlign: TextAlign.center,
+                    textDirection: TextDirection.rtl,
+                  ),
+                ),
               ),
             ),
-            Spacer(),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

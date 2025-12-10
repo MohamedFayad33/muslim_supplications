@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/model/azkar_model.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_card.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/count_azkar_widget.dart';
 
-class BodyDetailsView extends StatelessWidget {
-  const BodyDetailsView({super.key});
+class BodyDetailsView extends StatefulWidget {
+  const BodyDetailsView({super.key, required this.azkar});
+  final List<AzkarModel> azkar;
 
+  @override
+  State<BodyDetailsView> createState() => _BodyDetailsViewState();
+}
+
+class _BodyDetailsViewState extends State<BodyDetailsView> {
+  int index = 0;
+  int num = 0;
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.sizeOf(context).height;
@@ -15,12 +24,37 @@ class BodyDetailsView extends StatelessWidget {
         clipBehavior: Clip.none,
         alignment: AlignmentDirectional.bottomCenter,
         children: [
-          AzkarCard(
-            title: '',
-            // 'قال الرّسول -صلّى الله عليه وسلّم-: (لَا يُؤْمِنُ أحَدُكُمْ، حتَّى يُحِبَّ لأخِيهِ ما يُحِبُّ لِنَفْسِهِ),',
-          ),
+          AzkarCard(title: widget.azkar[index].zekr),
 
-          Positioned(bottom: -45, child: CountAzkarWidget(countNum: 3)),
+          Positioned(
+            bottom: -45,
+            child: CountAzkarWidget(
+              counter: () {
+                setState(() {
+                  int x = widget.azkar[index].repeat - 1;
+                  int y = widget.azkar.length - 1;
+                  if (x >= num) {
+                    num++;
+                  } else if (x < num && y > index) {
+                    index++;
+                    num = 0;
+                  }
+                });
+              },
+              previous: () {
+                setState(() {
+                  index == 0 ? null : index--;
+                });
+              },
+              next: () {
+                setState(() {
+                  widget.azkar.length - 1 <= index ? null : index++;
+                });
+              },
+              countNum: widget.azkar[index].repeat,
+              num: num,
+            ),
+          ),
         ],
       ),
     );
