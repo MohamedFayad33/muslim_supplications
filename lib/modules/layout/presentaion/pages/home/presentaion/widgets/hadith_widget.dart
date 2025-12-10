@@ -7,6 +7,7 @@ class Hadith extends StatelessWidget {
   final AzkarCardModel hadith = const AzkarCardModel(
     title:
         'قال الرّسول -صلّى الله عليه وسلّم-: (لَا يُؤْمِنُ أحَدُكُمْ، حتَّى يُحِبَّ لأخِيهِ ما يُحِبُّ لِنَفْسِهِ),',
+    path: '',
 
     icon: null,
   );

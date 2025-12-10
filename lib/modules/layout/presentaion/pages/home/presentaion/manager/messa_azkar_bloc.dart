@@ -9,23 +9,23 @@ import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/
 part 'messa_azkar_event.dart';
 part 'messa_azkar_state.dart';
 
-class MessaAzkarBloc extends Bloc<MessaAzkarEvent, MessaAzkarState> {
+class AzkarBloc extends Bloc<AzkarEvent, AzkarState> {
   final HomeRepo _homeRepo;
-  MessaAzkarBloc(this._homeRepo) : super(MessaAzkarInitial()) {
-    on<GetMessaAzkarEvent>(getAzkarMessa);
+  AzkarBloc(this._homeRepo) : super(AzkarInitial()) {
+    on<GetAzkarEvent>(getAzkarMessa);
   }
 
-  FutureOr getAzkarMessa(GetMessaAzkarEvent event, Emitter emit) async {
-    emit(MessaAzkarLoading());
+  FutureOr getAzkarMessa(GetAzkarEvent event, Emitter emit) async {
+    emit(AzkarLoading());
     try {
       List<AzkarModel> myAzkar = await _homeRepo.getAzkarMassa(
         event.path,
         event.context,
       );
 
-      emit(MessaAzkarSuccess(myAzkar: myAzkar));
+      emit(AzkarSuccess(myAzkar: myAzkar));
     } catch (e) {
-      emit(MessaAzkarFailuer());
+      emit(AzkarFailuer());
     }
   }
 }

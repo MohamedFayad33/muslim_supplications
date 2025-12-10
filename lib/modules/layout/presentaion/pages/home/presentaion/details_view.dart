@@ -10,7 +10,7 @@ class DetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<MessaAzkarBloc, MessaAzkarState>(
+    return BlocBuilder<AzkarBloc, AzkarState>(
       builder: (context, state) => Scaffold(
         body: Padding(
           padding: EdgeInsets.only(
@@ -22,7 +22,7 @@ class DetailsView extends StatelessWidget {
             children: [
               AppbarDetailsView(),
               SizedBox(height: 30),
-              state is MessaAzkarSuccess
+              state is AzkarSuccess
                   ? BodyDetailsView(azkar: state.myAzkar)
                   : SizedBox(),
             ],

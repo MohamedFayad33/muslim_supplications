@@ -1,22 +1,22 @@
 part of 'messa_azkar_bloc.dart';
 
-abstract class MessaAzkarState extends Equatable {
-  const MessaAzkarState();
+abstract class AzkarState extends Equatable {
+  const AzkarState();
 
   @override
   List<Object> get props => [];
 }
 
-class MessaAzkarInitial extends MessaAzkarState {}
+class AzkarInitial extends AzkarState {}
 
-class MessaAzkarLoading extends MessaAzkarState {}
+class AzkarLoading extends AzkarState {}
 
-class MessaAzkarSuccess extends MessaAzkarState {
+class AzkarSuccess extends AzkarState {
   final List<AzkarModel> myAzkar;
 
-  const MessaAzkarSuccess({required this.myAzkar});
+  const AzkarSuccess({required this.myAzkar});
   @override
   List<Object> get props => [myAzkar];
 }
 
-class MessaAzkarFailuer extends MessaAzkarState {}
+class AzkarFailuer extends AzkarState {}
