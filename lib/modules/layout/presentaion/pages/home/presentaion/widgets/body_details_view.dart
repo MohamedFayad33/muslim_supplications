@@ -13,9 +13,10 @@ class BodyDetailsView extends StatefulWidget {
 
 class _BodyDetailsViewState extends State<BodyDetailsView> {
   int index = 0;
-  int num = 0;
+
   @override
   Widget build(BuildContext context) {
+    int num = widget.azkar[index].count;
     double height = MediaQuery.sizeOf(context).height;
 
     return SizedBox(
@@ -33,11 +34,11 @@ class _BodyDetailsViewState extends State<BodyDetailsView> {
                 setState(() {
                   int x = widget.azkar[index].repeat - 1;
                   int y = widget.azkar.length - 1;
-                  if (x >= num) {
-                    num++;
-                  } else if (x < num && y > index) {
+                  print(num);
+                  if (x >= widget.azkar[index].count) {
+                    widget.azkar[index].count++;
+                  } else if (x < widget.azkar[index].count && y > index) {
                     index++;
-                    num = 0;
                   }
                 });
               },
