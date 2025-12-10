@@ -1,8 +1,8 @@
 class AzkarModel {
   final String zekr;
-  int count;
   final int repeat;
   final String bless;
+  int count;
 
   AzkarModel({
     required this.zekr,

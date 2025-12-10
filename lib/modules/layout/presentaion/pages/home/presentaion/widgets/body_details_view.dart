@@ -20,7 +20,7 @@ class _BodyDetailsViewState extends State<BodyDetailsView> {
     double height = MediaQuery.sizeOf(context).height;
 
     return SizedBox(
-      height: height * 0.60,
+      height: height * 0.75,
       child: Stack(
         clipBehavior: Clip.none,
         alignment: AlignmentDirectional.bottomCenter,
@@ -30,18 +30,7 @@ class _BodyDetailsViewState extends State<BodyDetailsView> {
           Positioned(
             bottom: -45,
             child: CountAzkarWidget(
-              counter: () {
-                setState(() {
-                  int x = widget.azkar[index].repeat - 1;
-                  int y = widget.azkar.length - 1;
-                  print(num);
-                  if (x >= widget.azkar[index].count) {
-                    widget.azkar[index].count++;
-                  } else if (x < widget.azkar[index].count && y > index) {
-                    index++;
-                  }
-                });
-              },
+              counter: counter,
               previous: () {
                 setState(() {
                   index == 0 ? null : index--;
@@ -59,5 +48,17 @@ class _BodyDetailsViewState extends State<BodyDetailsView> {
         ],
       ),
     );
+  }
+
+  void counter() {
+    setState(() {
+      int x = widget.azkar[index].repeat - 1;
+      int y = widget.azkar.length - 1;
+      if (x >= widget.azkar[index].count) {
+        widget.azkar[index].count++;
+      } else if (x < widget.azkar[index].count && y > index) {
+        index++;
+      }
+    });
   }
 }

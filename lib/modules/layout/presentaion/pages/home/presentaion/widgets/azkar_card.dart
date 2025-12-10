@@ -13,8 +13,6 @@ class AzkarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.sizeOf(context);
-
     return ClipRRect(
       borderRadius: BorderRadiusGeometry.circular(42),
       child: Card(
@@ -23,71 +21,68 @@ class AzkarCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                RotatedBox(
-                  quarterTurns: 1,
-                  child: Image.asset(
-                    ImageAssets.shape4,
-                    height: size.height * 0.05,
-                    color: ColorManager.primary,
-                  ),
-                ),
-
-                RotatedBox(
-                  quarterTurns: 2,
-                  child: Image.asset(
-                    ImageAssets.shape4,
-                    height: size.height * 0.05,
-                    color: ColorManager.primary,
-                  ),
-                ),
-              ],
-            ),
+            Shape4Widget(rotateLeft: 1, rotateRight: 2),
 
             icon != null ? Icon(icon, size: 60) : const SizedBox(),
 
             Expanded(
-              child: SingleChildScrollView(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppPadding.p16,
-                  ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+                child: Center(
                   child: Text(
                     title,
                     style: StylesManager.zikerText(context),
                     textAlign: TextAlign.center,
                     textDirection: TextDirection.rtl,
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
                   ),
                 ),
               ),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                RotatedBox(
-                  quarterTurns: 4,
-                  child: Image.asset(
-                    ImageAssets.shape4,
-                    height: size.height * 0.05,
-                    color: ColorManager.primary,
-                  ),
-                ),
-                RotatedBox(
-                  quarterTurns: 3,
-                  child: Image.asset(
-                    ImageAssets.shape4,
-                    height: size.height * 0.05,
-                    color: ColorManager.primary,
-                  ),
-                ),
-              ],
-            ),
+            Shape4Widget(rotateLeft: 4, rotateRight: 3),
           ],
         ),
       ),
+    );
+  }
+}
+
+class Shape4Widget extends StatelessWidget {
+  const Shape4Widget({
+    super.key,
+    required this.rotateLeft,
+    required this.rotateRight,
+  });
+
+  final int rotateLeft;
+  final int rotateRight;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.sizeOf(context);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        RotatedBox(
+          quarterTurns: rotateLeft,
+          child: Image.asset(
+            ImageAssets.shape4,
+            height: size.height * 0.05,
+            color: ColorManager.primary,
+          ),
+        ),
+
+        RotatedBox(
+          quarterTurns: rotateRight,
+          child: Image.asset(
+            ImageAssets.shape4,
+            height: size.height * 0.05,
+            color: ColorManager.primary,
+          ),
+        ),
+      ],
     );
   }
 }

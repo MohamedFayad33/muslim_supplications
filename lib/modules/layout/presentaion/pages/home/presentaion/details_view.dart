@@ -5,18 +5,8 @@ import 'package:muslim_supplications/modules/layout/presentaion/pages/home/prese
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/appbar_details_view.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/body_details_view.dart';
 
-class DetailsView extends StatefulWidget {
+class DetailsView extends StatelessWidget {
   const DetailsView({super.key});
-
-  @override
-  State<DetailsView> createState() => _DetailsViewState();
-}
-
-class _DetailsViewState extends State<DetailsView> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
