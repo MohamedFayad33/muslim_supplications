@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:muslim_supplications/core/resources/values_manager.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/manager/messa_azkar_bloc.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/appbar_details_view.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/body_details_view.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/manager/messa_azkar_bloc.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/appbar_details_view.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/body_details_view.dart';
 
 class DetailsView extends StatelessWidget {
   const DetailsView({super.key});

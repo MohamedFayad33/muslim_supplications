@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/data_souress/local_data/home_local_data_souress.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/model/azkar_model.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/data_souress/local_data/home_local_data_souress.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/model/azkar_model.dart';
 
 abstract class HomeRepo {
   Future<List<AzkarModel>> getAzkarMassa(String path, BuildContext context);

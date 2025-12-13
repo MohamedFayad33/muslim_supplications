@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/routes_manger/routes.dart';
 import 'package:muslim_supplications/modules/layout/presentaion/layout_view.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/details_view.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/details_view.dart';
 
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {

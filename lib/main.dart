@@ -4,8 +4,8 @@ import 'package:muslim_supplications/core/di/app_di.dart';
 import 'package:muslim_supplications/core/routes_manger/route_generator.dart';
 import 'package:muslim_supplications/core/routes_manger/routes.dart';
 import 'package:muslim_supplications/core/theme/theme_app.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/repo/home_repo.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/manager/messa_azkar_bloc.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/repo/home_repo.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/manager/messa_azkar_bloc.dart';
 
 void main() {
   runApp(const MyApp());

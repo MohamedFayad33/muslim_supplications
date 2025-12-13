@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/model/azkar_model.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/repo/home_repo.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/model/azkar_model.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/repo/home_repo.dart';
 
 part 'messa_azkar_event.dart';
 part 'messa_azkar_state.dart';

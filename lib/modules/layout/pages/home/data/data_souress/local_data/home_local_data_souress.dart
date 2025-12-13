@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/model/azkar_model.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/model/azkar_model.dart';
 
 abstract class HomeLocalDataSouress {
   Future<List<AzkarModel>> getAzkarMassa(String path, BuildContext context);

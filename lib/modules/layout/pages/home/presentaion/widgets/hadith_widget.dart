@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/modules/layout/data/models/azkar_card_model.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_card.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/azkar_card.dart';
 
 class Hadith extends StatelessWidget {
   const Hadith({super.key});

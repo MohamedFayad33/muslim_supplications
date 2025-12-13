@@ -2,19 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/color_manager.dart';
 import 'package:muslim_supplications/core/resources/styles_manager.dart';
 import 'package:muslim_supplications/core/resources/values_manager.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/shape4_widget.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/shape4_widget.dart';
 
-class CustomZakrWidget extends StatelessWidget {
-  const CustomZakrWidget({
-    super.key,
-    required this.title,
-    this.icon,
-    this.color,
-  });
+class AzkarCard extends StatelessWidget {
+  const AzkarCard({super.key, required this.title});
 
   final String title;
-  final IconData? icon;
-  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -28,19 +21,18 @@ class CustomZakrWidget extends StatelessWidget {
           children: [
             Shape4Widget(rotateLeft: 1, rotateRight: 2),
 
-            icon != null ? Icon(icon, size: 60) : const SizedBox(),
-
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
                 child: Center(
-                  child: Text(
-                    title,
-                    style: StylesManager.zikerText(context),
-                    textAlign: TextAlign.center,
-                    textDirection: TextDirection.rtl,
-                    softWrap: true,
-                    overflow: TextOverflow.visible,
+                  child: SingleChildScrollView(
+                    child: Text(
+                      title,
+                      style: StylesManager.zikerText(context),
+                      textAlign: TextAlign.center,
+                      textDirection: TextDirection.rtl,
+                      softWrap: true,
+                    ),
                   ),
                 ),
               ),

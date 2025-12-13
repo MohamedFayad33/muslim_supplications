@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:muslim_supplications/core/resources/constants_manager.dart';
 import 'package:muslim_supplications/core/routes_manger/routes.dart';
 import 'package:muslim_supplications/modules/layout/data/models/azkar_card_model.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/manager/messa_azkar_bloc.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/custom_zakr_widget.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/manager/messa_azkar_bloc.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/custom_zakr_widget.dart';
 
 class Azkar extends StatelessWidget {
   const Azkar({super.key});

@@ -1,5 +1,5 @@
 import 'package:get_it/get_it.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/di/home_di.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/di/home_di.dart';
 
 GetIt sl = GetIt.instance;
 

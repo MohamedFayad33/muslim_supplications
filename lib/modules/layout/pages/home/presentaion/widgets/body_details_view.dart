@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/data/model/azkar_model.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_card.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/count_azkar_widget.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/data/model/azkar_model.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/azkar_card.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/count_azkar_widget.dart';
 
 class BodyDetailsView extends StatefulWidget {
   const BodyDetailsView({super.key, required this.azkar});

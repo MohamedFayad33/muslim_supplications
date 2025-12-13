@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muslim_supplications/core/resources/values_manager.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/azkar_widget.dart';
-import 'package:muslim_supplications/modules/layout/presentaion/pages/home/presentaion/widgets/hadith_widget.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/azkar_widget.dart';
+import 'package:muslim_supplications/modules/layout/pages/home/presentaion/widgets/hadith_widget.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
